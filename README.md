@@ -1,0 +1,1 @@
+This is a vibe coded portfolio website done with the help of Sonnet 4.5 in Cursor AI. 
