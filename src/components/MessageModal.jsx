@@ -62,6 +62,7 @@ const MessageModal = ({ open, onClose }) => {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
+          action="/"
         >
           <input type="hidden" name="form-name" value="contact" />
 
