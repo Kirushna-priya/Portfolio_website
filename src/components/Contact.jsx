@@ -4,39 +4,40 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="border-t border-slate-800 bg-slate-950/80"
+      className="border-t border-slate-800 bg-slate-950/50"
       aria-labelledby="contact-heading"
     >
-      <div className="fade-in-up mx-auto max-w-5xl px-4 py-14 sm:py-16">
+      <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
         <h2
           id="contact-heading"
-          className="text-base font-semibold uppercase tracking-[0.2em] text-brand-400"
+          className="text-base font-semibold uppercase tracking-[0.15em] text-teal-300"
         >
           Contact
         </h2>
-        <div className="mt-2 h-px w-16 rounded-full bg-gradient-to-r from-brand-400 to-transparent" />
-        <p className="mt-4 text-sm text-slate-300 sm:text-base">
-          For roles in AI/ML and data-driven products.
+        <div className="mt-2 h-px w-16 rounded-full bg-gradient-to-r from-teal-300 to-transparent" />
+        <p className="mt-6 max-w-2xl text-base text-slate-300">
+          Open to roles in AI/ML, GenAI, and intelligent automation. Let's connect.
         </p>
 
-        <dl className="mt-6 space-y-3 text-sm text-slate-200">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-            <dt className="font-medium text-slate-300">Email</dt>
-            <dd>
+        <dl className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+            <dt className="font-semibold text-slate-50">Email</dt>
+            <dd className="mt-2">
               <a
                 href="mailto:kirushna203@gmail.com"
-                className="text-brand-300 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded"
+                className="text-teal-300 hover:text-teal-200 font-medium transition"
               >
                 kirushna203@gmail.com
               </a>
             </dd>
           </div>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-            <dt className="font-medium text-slate-300">GitHub</dt>
-            <dd>
+
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+            <dt className="font-semibold text-slate-50">GitHub</dt>
+            <dd className="mt-2">
               <a
                 href="https://github.com/Kirushna-priya"
-                className="text-brand-300 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded"
+                className="text-teal-300 hover:text-teal-200 font-medium transition"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -44,16 +45,38 @@ const Contact = () => {
               </a>
             </dd>
           </div>
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-            <dt className="font-medium text-slate-300">LinkedIn</dt>
-            <dd>
+
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+            <dt className="font-semibold text-slate-50">LinkedIn</dt>
+            <dd className="mt-2">
               <a
-              href="https://www.linkedin.com/in/kirushna-priya"
-                className="text-brand-300 underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 rounded"
+                href="https://www.linkedin.com/in/kirushna-priya"
+                className="text-teal-300 hover:text-teal-200 font-medium transition"
                 target="_blank"
                 rel="noreferrer"
               >
-                www.linkedin.com/in/kirushna-priya
+                linkedin.com/in/kirushna-priya
+              </a>
+            </dd>
+          </div>
+
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+            <dt className="font-semibold text-slate-50">Location</dt>
+            <dd className="mt-2 text-slate-300">
+              Bengaluru, Karnataka 560037
+            </dd>
+          </div>
+
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+            <dt className="font-semibold text-slate-50">Portfolio</dt>
+            <dd className="mt-2">
+              <a
+                href="https://kirushnapriya-portfolio.netlify.app"
+                className="text-teal-300 hover:text-teal-200 font-medium transition"
+                target="_blank"
+                rel="noreferrer"
+              >
+                kirushnapriya-portfolio.netlify.app
               </a>
             </dd>
           </div>

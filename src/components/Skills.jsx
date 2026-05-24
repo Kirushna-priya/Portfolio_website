@@ -1,70 +1,117 @@
 import React from 'react';
 
-const SkillGroup = ({ title, items }) => (
-  <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:border-brand-300/80 hover:bg-slate-900/90">
-    <h3 className="text-sm font-semibold text-slate-100">{title}</h3>
-    <ul className="mt-3 space-y-1.5 text-sm text-slate-300">
-      {items.map((item) => (
-        <li key={item} className="flex items-start gap-2">
-          <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-brand-300" />
-          <span>{item}</span>
-        </li>
+const SkillCategory = ({ title, skills }) => (
+  <div className="rounded-xl bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:ring-teal-600">
+    <h3 className="text-sm font-semibold text-slate-50">{title}</h3>
+    <div className="mt-4 flex flex-wrap gap-2">
+      {skills.map((skill) => (
+        <span
+          key={skill}
+          className="inline-block rounded-full bg-slate-800 px-3 py-1.5 text-xs font-medium text-teal-300 ring-1 ring-slate-700"
+        >
+          {skill}
+        </span>
       ))}
-    </ul>
+    </div>
   </div>
 );
 
 const Skills = () => {
+  const skillCategories = [
+    {
+      title: 'Programming & ML',
+      skills: [
+        'Python',
+        'Linux',
+        'pandas',
+        'NumPy',
+        'scikit-learn',
+        'supervised learning',
+        'unsupervised learning',
+        'feature engineering',
+        'model evaluation',
+        'AUC',
+        'recall-focused evaluation',
+        'data cleaning',
+        'statistical analysis',
+        'seaborn',
+        'matplotlib',
+        'Selenium',
+      ],
+    },
+    {
+      title: 'Deep Learning & NLP',
+      skills: [
+        'PyTorch',
+        'Keras',
+        'LLMs',
+        'Gemini API',
+        'prompt engineering',
+        'tool calling',
+        'LoRA',
+        'QLoRA',
+      ],
+    },
+    {
+      title: 'GenAI & Platforms',
+      skills: [
+        'LLM API integration',
+        'Hugging Face',
+        'Openclaw',
+        'ComfyUI',
+        'N8N',
+        'GPU workflows',
+        'Vast.ai',
+      ],
+    },
+    {
+      title: 'MLOps & Deployment',
+      skills: [
+        'Flask',
+        'Docker',
+        'AWS Elastic Beanstalk',
+        'Gradio',
+        'Streamlit',
+      ],
+    },
+    {
+      title: 'Collaboration',
+      skills: [
+        'Git',
+        'GitHub',
+        'version control workflows',
+        'code reviews',
+        'documentation',
+      ],
+    },
+  ];
+
   return (
     <section
       id="skills"
-      className="border-t border-slate-900 bg-black"
+      className="border-t border-slate-800 bg-slate-950/50"
       aria-labelledby="skills-heading"
     >
-      <div className="fade-in-up mx-auto max-w-5xl px-4 py-14 sm:py-16">
+      <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
         <h2
           id="skills-heading"
-          className="text-base font-semibold uppercase tracking-[0.2em] text-brand-400"
+          className="text-base font-semibold uppercase tracking-[0.15em] text-teal-300"
         >
-          Skills &amp; Competencies
+          Skills
         </h2>
-        <div className="mt-2 h-px w-16 rounded-full bg-gradient-to-r from-brand-400 to-transparent" />
-        <p className="mt-4 text-sm text-slate-300 sm:text-base">
-          Focused on AI systems that balance accuracy with robustness and clarity.
+        <div className="mt-2 h-px w-16 rounded-full bg-gradient-to-r from-teal-300 to-transparent" />
+        <p className="mt-6 max-w-2xl text-base text-slate-300">
+          Focused on AI systems that balance performance with reproducibility and practical deployment.
         </p>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
-          <SkillGroup
-            title="Languages & Libraries"
-            items={[
-              'Python',
-              'pandas, NumPy',
-              'scikit-learn',
-              'PyTorch, Keras',
-            ]}
-          />
-          <SkillGroup
-            title="Machine Learning"
-            items={[
-              'Supervised & unsupervised learning',
-              'Classification & regression',
-              'Feature engineering',
-              'Model evaluation & metrics awareness',
-            ]}
-          />
-          <SkillGroup
-            title="Data & Tools"
-            items={[
-              'Data cleaning & statistical analysis',
-              'Visualization with seaborn & matplotlib',
-              'GenAI tooling: Bolt.new, N8N',
-              'LLM API calls & tool calling',
-              'Working with Ollama locally',
-              'Gradio for rapid UIs',
-              'Flask, Docker, AWS deployment',
-              'Version control with Git & GitHub',
-            ]}
-          />
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {skillCategories.map((category) => (
+            <SkillCategory
+              key={category.title}
+              title={category.title}
+              skills={category.skills}
+            />
+          ))}
         </div>
       </div>
     </section>

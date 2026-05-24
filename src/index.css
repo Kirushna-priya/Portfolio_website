@@ -14,20 +14,21 @@ body {
 }
 
 ::selection {
-  @apply bg-brand-500 text-slate-900;
+  @apply bg-teal-100 text-teal-900;
 }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Smooth transitions for interactive elements */
+a, button {
+  @apply transition-colors duration-200;
 }
 
-.fade-in-up {
-  animation: fade-in-up 0.7s ease-out both;
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold;
 }
+
+/* Accessible focus states */
+:focus-visible {
+  @apply outline-none ring-2 ring-offset-2 ring-teal-600;
+}
+
