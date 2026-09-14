@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from './Reveal.jsx';
 
 const experiences = [
   {
@@ -55,7 +56,7 @@ const Experience = () => {
       className="border-t border-slate-800 bg-slate-950/50"
       aria-labelledby="experience-heading"
     >
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+      <Reveal className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
         <h2
           id="experience-heading"
           className="text-base font-semibold uppercase tracking-[0.15em] text-teal-300"
@@ -113,7 +114,7 @@ const Experience = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

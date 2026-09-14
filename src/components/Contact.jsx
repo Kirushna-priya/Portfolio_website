@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from './Reveal.jsx';
 
 const Contact = () => {
   return (
@@ -7,7 +8,7 @@ const Contact = () => {
       className="border-t border-slate-800 bg-slate-950/50"
       aria-labelledby="contact-heading"
     >
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+      <Reveal className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
         <h2
           id="contact-heading"
           className="text-base font-semibold uppercase tracking-[0.15em] text-teal-300"
@@ -20,7 +21,7 @@ const Contact = () => {
         </p>
 
         <dl className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600">
             <dt className="font-semibold text-slate-50">Email</dt>
             <dd className="mt-2">
               <a
@@ -32,7 +33,7 @@ const Contact = () => {
             </dd>
           </div>
 
-          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600">
             <dt className="font-semibold text-slate-50">GitHub</dt>
             <dd className="mt-2">
               <a
@@ -46,7 +47,7 @@ const Contact = () => {
             </dd>
           </div>
 
-          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600">
             <dt className="font-semibold text-slate-50">LinkedIn</dt>
             <dd className="mt-2">
               <a
@@ -60,14 +61,42 @@ const Contact = () => {
             </dd>
           </div>
 
-          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600">
+            <dt className="font-semibold text-slate-50">Instagram</dt>
+            <dd className="mt-2">
+              <a
+                href="https://www.instagram.com/iam.kirushnapriya/"
+                className="text-teal-300 hover:text-teal-200 font-medium transition"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @iam.kirushnapriya
+              </a>
+            </dd>
+          </div>
+
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600">
+            <dt className="font-semibold text-slate-50">Hashnode</dt>
+            <dd className="mt-2">
+              <a
+                href="https://hashnode.com/@kirushnapriya"
+                className="text-teal-300 hover:text-teal-200 font-medium transition"
+                target="_blank"
+                rel="noreferrer"
+              >
+                hashnode.com/@kirushnapriya
+              </a>
+            </dd>
+          </div>
+
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600">
             <dt className="font-semibold text-slate-50">Location</dt>
             <dd className="mt-2 text-slate-300">
               Bengaluru, Karnataka 560037
             </dd>
           </div>
 
-          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700">
+          <div className="rounded-lg bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600">
             <dt className="font-semibold text-slate-50">Portfolio</dt>
             <dd className="mt-2">
               <a
@@ -81,7 +110,7 @@ const Contact = () => {
             </dd>
           </div>
         </dl>
-      </div>
+      </Reveal>
     </section>
   );
 };

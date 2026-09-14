@@ -35,22 +35,22 @@ const App = () => {
             className="hidden gap-6 text-xs font-medium text-slate-300 sm:flex"
             aria-label="Primary navigation"
           >
-            <a href="#about" className="hover:text-teal-300 transition">
+            <a href="#about" className="nav-link hover:text-teal-300 transition">
               About
             </a>
-            <a href="#experience" className="hover:text-teal-300 transition">
+            <a href="#experience" className="nav-link hover:text-teal-300 transition">
               Experience
             </a>
-            <a href="#learning" className="hover:text-teal-300 transition">
-              Certifications
-            </a>
-            <a href="#skills" className="hover:text-teal-300 transition">
-              Skills
-            </a>
-            <a href="#projects" className="hover:text-teal-300 transition">
+            <a href="#projects" className="nav-link hover:text-teal-300 transition">
               Projects
             </a>
-            <a href="#contact" className="hover:text-teal-300 transition">
+            <a href="#learning" className="nav-link hover:text-teal-300 transition">
+              Certifications
+            </a>
+            <a href="#skills" className="nav-link hover:text-teal-300 transition">
+              Skills
+            </a>
+            <a href="#contact" className="nav-link hover:text-teal-300 transition">
               Contact
             </a>
           </nav>
@@ -61,9 +61,9 @@ const App = () => {
         <Hero />
         <About />
         <Experience />
+        <Projects />
         <Learning />
         <Skills />
-        <Projects />
         <Contact />
       </main>
 
@@ -77,7 +77,7 @@ const App = () => {
               href="https://github.com/Kirushna-priya"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-teal-300 transition"
+              className="nav-link hover:text-teal-300 transition"
             >
               GitHub
             </a>
@@ -86,9 +86,27 @@ const App = () => {
               href="https://www.linkedin.com/in/kirushna-priya"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-teal-300 transition"
+              className="nav-link hover:text-teal-300 transition"
             >
               LinkedIn
+            </a>
+            <span aria-hidden="true">·</span>
+            <a
+              href="https://www.instagram.com/iam.kirushnapriya/"
+              target="_blank"
+              rel="noreferrer"
+              className="nav-link hover:text-teal-300 transition"
+            >
+              Instagram
+            </a>
+            <span aria-hidden="true">·</span>
+            <a
+              href="https://hashnode.com/@kirushnapriya"
+              target="_blank"
+              rel="noreferrer"
+              className="nav-link hover:text-teal-300 transition"
+            >
+              Hashnode
             </a>
           </div>
         </div>

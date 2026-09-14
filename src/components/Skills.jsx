@@ -1,7 +1,8 @@
 import React from 'react';
+import Reveal from './Reveal.jsx';
 
 const SkillCategory = ({ title, skills }) => (
-  <div className="rounded-xl bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:ring-teal-600">
+  <div className="rounded-xl bg-slate-900 p-6 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600">
     <h3 className="text-sm font-semibold text-slate-50">{title}</h3>
     <div className="mt-4 flex flex-wrap gap-2">
       {skills.map((skill) => (
@@ -50,6 +51,10 @@ const Skills = () => {
         'tool calling',
         'LoRA',
         'QLoRA',
+        'CrewAI',
+        'LangChain',
+        'LangGraph',
+        'multi-agent systems',
       ],
     },
     {
@@ -62,16 +67,23 @@ const Skills = () => {
         'N8N',
         'GPU workflows',
         'Vast.ai',
+        'RunPod.io',
+        'Embeddings',
+        'Vector Databases',
+        'RAG',
+        'Quantization',
       ],
     },
     {
       title: 'MLOps & Deployment',
       skills: [
         'Flask',
+        'FastAPI',
         'Docker',
         'AWS Elastic Beanstalk',
         'Gradio',
         'Streamlit',
+        'Hugging Face Spaces',
       ],
     },
     {
@@ -92,7 +104,7 @@ const Skills = () => {
       className="border-t border-slate-800 bg-slate-950/50"
       aria-labelledby="skills-heading"
     >
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+      <Reveal className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
         <h2
           id="skills-heading"
           className="text-base font-semibold uppercase tracking-[0.15em] text-teal-300"
@@ -113,7 +125,7 @@ const Skills = () => {
             />
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import Reveal from './Reveal.jsx';
 
 const items = [
   {
@@ -25,7 +26,7 @@ const Learning = () => {
       className="border-t border-slate-800 bg-slate-950/50"
       aria-labelledby="learning-heading"
     >
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
+      <Reveal className="mx-auto max-w-5xl px-4 py-16 sm:py-20">
         <h2
           id="learning-heading"
           className="text-base font-semibold uppercase tracking-[0.15em] text-teal-300"
@@ -38,7 +39,7 @@ const Learning = () => {
           {items.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-1 rounded-lg bg-slate-900 p-5 ring-1 ring-slate-700 transition hover:ring-teal-600 sm:flex-row sm:items-center sm:justify-between"
+              className="flex flex-col gap-1 rounded-lg bg-slate-900 p-5 ring-1 ring-slate-700 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/40 hover:ring-teal-600 sm:flex-row sm:items-center sm:justify-between"
             >
               <div>
                 <h3 className="font-semibold text-slate-50">{item.title}</h3>
@@ -48,7 +49,7 @@ const Learning = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };
